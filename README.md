@@ -2,4 +2,4 @@
 
 JetBook is notebook project with Jetson NX.
 
-[https://faboplatform.github.io/JetBook/](Docs)
+[JetBook Docs](https://faboplatform.github.io/JetBook/)
