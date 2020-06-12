@@ -13,8 +13,7 @@ window.onload = function() {
         	out += 'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>';
             out += '</iframe>';
         	out += '</div>';
-            console.log(tag[i].outerHTML)
-        	tag[i].outerHTML = "<div>TEST</div>";
+        	tag[i].outerHTML = out;
         }
     }
 }
