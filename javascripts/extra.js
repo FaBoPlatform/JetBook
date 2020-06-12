@@ -1,6 +1,7 @@
 window.onload = function() {
     var tag = document.getElementsByTagName('img');
-    for (var i = 0; i <= tag.length; i++) {
+    for (var i = 0; i < tag.length; i++) {
+        console.log(tag.length)
         if(tag[i].alt == "YOUTUBE") {
         	var src = tag[i].src;
         	src = src.match(".+/(.+?)$")[1];
