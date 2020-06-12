@@ -1,8 +1,8 @@
 window.onload = function() {
     var tag = document.getElementsByTagName('img');
-    console.log(tag.length)
     for (var i = 0; i < tag.length; i++) {
-        console.log(tag.length)
+        console.log(i)
+        /*
         if(tag[i].alt == "YOUTUBE") {
         	var src = tag[i].src;
         	src = src.match(".+/(.+?)$")[1];
@@ -17,5 +17,6 @@ window.onload = function() {
         	out += "</div>"
         	tag[i].outerHTML = out;
         }
+        */
     }
 }
