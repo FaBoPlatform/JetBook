@@ -12,7 +12,8 @@ window.onload = function() {
         	out += "\" ";
         	out += "frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
         	out += "</div>";
-        	tag[i].outerHTML = out;
+            console.log(out)
+        	//tag[i].outerHTML = out;
         }
     }
 }
