@@ -14,7 +14,7 @@ window.onload = function() {
             out += '</iframe>';
         	out += '</div>';
             console.log(tag[i].outerHTML)
-        	//tag[i].outerHTML = out;
+        	tag[i].outerHTML = out;
         }
     }
 }
