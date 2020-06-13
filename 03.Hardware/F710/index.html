@@ -379,6 +379,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sample" class="md-nav__link">
+    Sample
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -430,6 +437,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sample" class="md-nav__link">
+    Sample
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -455,6 +469,87 @@
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install python-pygame</span>
 <span class=err>sudo pip install pygame</span>
+</code></pre></div></td></tr></table></p>
+<h2 id="sample">Sample</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>import</span> <span class=nn>pygame</span>
+<span class=kn>from</span> <span class=nn>pygame.locals</span> <span class=kn>import</span> <span class=o>*</span>
+
+<span class=n>pygame</span><span class=o>.</span><span class=n>joystick</span><span class=o>.</span><span class=n>init</span><span class=p>()</span>
+
+<span class=k>try</span><span class=p>:</span>
+    <span class=n>j</span> <span class=o>=</span> <span class=n>pygame</span><span class=o>.</span><span class=n>joystick</span><span class=o>.</span><span class=n>Joystick</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span>
+    <span class=n>j</span><span class=o>.</span><span class=n>init</span><span class=p>()</span>
+    <span class=n>num_buttons</span> <span class=o>=</span> <span class=n>j</span><span class=o>.</span><span class=n>get_numbuttons</span><span class=p>()</span>
+    <span class=n>num_axes</span> <span class=o>=</span> <span class=n>j</span><span class=o>.</span><span class=n>get_numaxes</span><span class=p>()</span>
+    <span class=n>num_hats</span> <span class=o>=</span> <span class=n>j</span><span class=o>.</span><span class=n>get_numhats</span><span class=p>()</span>
+    <span class=k>print</span><span class=p>(</span><span class=s2>&quot;device name: </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>j</span><span class=o>.</span><span class=n>get_name</span><span class=p>())</span>
+    <span class=k>print</span><span class=p>(</span><span class=s2>&quot;num of button: </span><span class=si>%d</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>num_buttons</span><span class=p>)</span>
+    <span class=k>print</span><span class=p>(</span><span class=s2>&quot;num of axis: </span><span class=si>%d</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>num_axes</span><span class=p>)</span>
+    <span class=k>print</span><span class=p>(</span><span class=s2>&quot;num of hat: </span><span class=si>%d</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>num_hats</span><span class=p>)</span>
+<span class=k>except</span> <span class=n>pygame</span><span class=o>.</span><span class=n>error</span><span class=p>:</span>
+    <span class=k>print</span><span class=p>(</span><span class=s2>&quot;Not found&quot;</span><span class=p>)</span>
+<span class=n>pygame</span><span class=o>.</span><span class=n>init</span><span class=p>()</span>
+
+<span class=k>while</span> <span class=mi>1</span><span class=p>:</span>
+     <span class=k>for</span> <span class=n>e</span> <span class=ow>in</span> <span class=n>pygame</span><span class=o>.</span><span class=n>event</span><span class=o>.</span><span class=n>get</span><span class=p>():</span>
+        <span class=n>axes</span> <span class=o>=</span> <span class=p>[]</span>
+        <span class=n>buttons</span> <span class=o>=</span> <span class=p>[]</span>
+        <span class=n>hats_x</span> <span class=o>=</span> <span class=p>[]</span>
+        <span class=n>hats_y</span> <span class=o>=</span> <span class=p>[]</span>
+        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>num_axes</span><span class=p>):</span>        
+            <span class=n>axes</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>j</span><span class=o>.</span><span class=n>get_axis</span><span class=p>(</span><span class=n>i</span><span class=p>))</span>
+        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>num_buttons</span><span class=p>):</span>
+            <span class=n>buttons</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>j</span><span class=o>.</span><span class=n>get_button</span><span class=p>(</span><span class=n>i</span><span class=p>))</span>
+        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>num_hats</span><span class=p>):</span>
+            <span class=n>x</span><span class=p>,</span><span class=n>y</span> <span class=o>=</span> <span class=n>j</span><span class=o>.</span><span class=n>get_hat</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+            <span class=n>hats_x</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>x</span><span class=p>)</span>
+            <span class=n>hats_y</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>y</span><span class=p>)</span>
+
+        <span class=k>for</span> <span class=n>index</span><span class=p>,</span> <span class=n>item</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>axes</span><span class=p>):</span>
+            <span class=k>print</span><span class=p>(</span><span class=s2>&quot;axis(</span><span class=si>%s</span><span class=s2>): </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>index</span><span class=p>),</span> <span class=nb>str</span><span class=p>(</span><span class=n>item</span><span class=p>)))</span>
+        <span class=k>for</span> <span class=n>index</span><span class=p>,</span> <span class=n>item</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>buttons</span><span class=p>):</span>
+            <span class=k>print</span><span class=p>(</span><span class=s2>&quot;button(</span><span class=si>%s</span><span class=s2>): </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>index</span><span class=p>),</span> <span class=nb>str</span><span class=p>(</span><span class=n>item</span><span class=p>)))</span>
+        <span class=k>for</span> <span class=n>index</span><span class=p>,</span> <span class=n>item</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>hats_x</span><span class=p>):</span>
+            <span class=k>print</span><span class=p>(</span><span class=s2>&quot;hat(</span><span class=si>%s</span><span class=s2>): </span><span class=si>%s</span><span class=s2>, </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>index</span><span class=p>),</span> <span class=nb>str</span><span class=p>(</span><span class=n>hats_x</span><span class=p>[</span><span class=n>index</span><span class=p>]),</span> <span class=nb>str</span><span class=p>(</span><span class=n>hats_y</span><span class=p>[</span><span class=n>index</span><span class=p>])))</span>
 </code></pre></div></td></tr></table></p>
                 
               
