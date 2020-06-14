@@ -15,7 +15,7 @@
     
     
       
-        <title>F710 - FaBo JetBook Docs</title>
+        <title>HID Joystick - FaBo JetBook Docs</title>
       
     
     
@@ -52,7 +52,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#f710" class="md-skip">
+        <a href="#hid-joystick" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -80,7 +80,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              F710
+              HID Joystick
             
           </span>
         </div>
@@ -352,14 +352,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        F710
+        HID Joystick
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="F710" class="md-nav__link md-nav__link--active">
-      F710
+    <a href="./" title="HID Joystick" class="md-nav__link md-nav__link--active">
+      HID Joystick
     </a>
     
       
@@ -378,8 +378,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#f710_1" class="md-nav__link">
-    F710の認識
+  <a href="#_1" class="md-nav__link">
+    対応表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hid-joystick_1" class="md-nav__link">
+    HID Joystick
   </a>
   
 </li>
@@ -392,7 +399,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     検証
   </a>
   
@@ -448,8 +455,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#f710_1" class="md-nav__link">
-    F710の認識
+  <a href="#_1" class="md-nav__link">
+    対応表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hid-joystick_1" class="md-nav__link">
+    HID Joystick
   </a>
   
 </li>
@@ -462,7 +476,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     検証
   </a>
   
@@ -484,8 +498,25 @@
                   
                 
                 
-                <h1 id="f710">F710</h1>
-<h2 id="f710_1">F710の認識</h2>
+                <h1 id="hid-joystick">HID Joystick</h1>
+<h2 id="_1">対応表</h2>
+<table>
+<thead>
+<tr>
+<th align="left">機種名</th>
+<th align="left">メーカー</th>
+<th align="left">認識</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://gaming.logicool.co.jp/ja-jp/products/gamepads/f710-wireless-gamepad.html">F710</a></td>
+<td align="left">logicool</td>
+<td align="left">○</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hid-joystick_1">HID Joystick</h2>
 <p>一般的なUSB HID Joystickは、<code>/dev/input/js0</code>で認識される。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>/dev/input/js0</span>
 </code></pre></div></td></tr></table></p>
@@ -494,7 +525,7 @@
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install python-pygame</span>
 <span class=err>sudo pip install pygame</span>
 </code></pre></div></td></tr></table></p>
-<h2 id="_1">検証</h2>
+<h2 id="_2">検証</h2>
 <p>検証用のサンプル</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
