@@ -15,7 +15,7 @@
     
     
       
-        <title>HID Joystick - FaBo JetBook Docs</title>
+        <title>UVC Camera - FaBo JetBook Docs</title>
       
     
     
@@ -52,7 +52,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hid-joystick" class="md-skip">
+        <a href="#uvc-camera" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -80,7 +80,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              HID Joystick
+              UVC Camera
             
           </span>
         </div>
@@ -319,20 +319,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.UVCCamera/" title="UVC Camera" class="md-nav__link">
-      UVC Camera
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../02.360Camera/" title="360度Camera" class="md-nav__link">
-      360度Camera
+    <a href="../01.CSICamera/" title="CSI Camera" class="md-nav__link">
+      CSI Camera
     </a>
   </li>
 
@@ -352,14 +340,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        HID Joystick
+        UVC Camera
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="HID Joystick" class="md-nav__link md-nav__link--active">
-      HID Joystick
+    <a href="./" title="UVC Camera" class="md-nav__link md-nav__link--active">
+      UVC Camera
     </a>
     
       
@@ -385,22 +373,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hid-joystick_1" class="md-nav__link">
-    HID Joystick
+  <a href="#c922" class="md-nav__link">
+    C922
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pygame" class="md-nav__link">
-    Pygameの設定
+  <a href="#c720" class="md-nav__link">
+    C720
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    検証
+  <a href="#imx291" class="md-nav__link">
+    IMX291搭載カメラ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imx317" class="md-nav__link">
+    IMX317搭載カメラ
   </a>
   
 </li>
@@ -409,6 +404,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03.360Camera/" title="360度Camera" class="md-nav__link">
+      360度Camera
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04.F710/" title="HID Joystick" class="md-nav__link">
+      HID Joystick
+    </a>
   </li>
 
         
@@ -462,22 +481,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hid-joystick_1" class="md-nav__link">
-    HID Joystick
+  <a href="#c922" class="md-nav__link">
+    C922
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pygame" class="md-nav__link">
-    Pygameの設定
+  <a href="#c720" class="md-nav__link">
+    C720
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    検証
+  <a href="#imx291" class="md-nav__link">
+    IMX291搭載カメラ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imx317" class="md-nav__link">
+    IMX317搭載カメラ
   </a>
   
 </li>
@@ -498,7 +524,7 @@
                   
                 
                 
-                <h1 id="hid-joystick">HID Joystick</h1>
+                <h1 id="uvc-camera">UVC Camera</h1>
 <h2 id="_1">対応表</h2>
 <table>
 <thead>
@@ -510,23 +536,31 @@
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://gaming.logicool.co.jp/ja-jp/products/gamepads/f710-wireless-gamepad.html">F710</a></td>
+<td align="left">C922</td>
 <td align="left">logicool</td>
+<td align="left">○</td>
+</tr>
+<tr>
+<td align="left">C720</td>
+<td align="left">logicool</td>
+<td align="left">○</td>
+</tr>
+<tr>
+<td align="left">IMX291搭載カメラ</td>
+<td align="left">ELP</td>
+<td align="left">○</td>
+</tr>
+<tr>
+<td align="left">IMX317搭載カメラ</td>
+<td align="left">ELP</td>
 <td align="left">○</td>
 </tr>
 </tbody>
 </table>
-<h2 id="hid-joystick_1">HID Joystick</h2>
-<p>一般的なUSB HID Joystickは、<code>/dev/input/js0</code>で認識される。</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>/dev/input/js0</span>
+<p>検証コマンド</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>v4l2-ctl -d /dev/video0 --list-formats-ext</span>
 </code></pre></div></td></tr></table></p>
-<h2 id="pygame">Pygameの設定</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo apt-get install python-pygame</span>
-<span class=err>sudo pip install pygame</span>
-</code></pre></div></td></tr></table></p>
-<h2 id="_2">検証</h2>
-<p>検証用のサンプル</p>
+<p>検証コード<a href="https://github.com/dusty-nv/jetson-inference/blob/786ac1d4fc7609d019efcabf53375c6d0ade98b6/docs/detectnet-example-2.md">dusty-nv/jetson-inference/</a></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
@@ -538,95 +572,27 @@
  9
 10
 11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>import</span> <span class=nn>pygame</span>
-<span class=kn>from</span> <span class=nn>pygame.locals</span> <span class=kn>import</span> <span class=o>*</span>
-<span class=kn>import</span> <span class=nn>os</span>
-<span class=kn>import</span> <span class=nn>time</span>
+12</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>import</span> <span class=nn>jetson.inference</span>
+<span class=kn>import</span> <span class=nn>jetson.utils</span>
 
-<span class=n>os</span><span class=o>.</span><span class=n>environ</span><span class=p>[</span><span class=s2>&quot;SDL_VIDEODRIVER&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&quot;dummy&quot;</span>
+<span class=n>net</span> <span class=o>=</span> <span class=n>jetson</span><span class=o>.</span><span class=n>inference</span><span class=o>.</span><span class=n>detectNet</span><span class=p>(</span><span class=s2>&quot;ssd-mobilenet-v2&quot;</span><span class=p>,</span> <span class=n>threshold</span><span class=o>=</span><span class=mf>0.5</span><span class=p>)</span>
+<span class=n>camera</span> <span class=o>=</span> <span class=n>jetson</span><span class=o>.</span><span class=n>utils</span><span class=o>.</span><span class=n>gstCamera</span><span class=p>(</span><span class=mi>1280</span><span class=p>,</span> <span class=mi>720</span><span class=p>,</span> <span class=s2>&quot;/dev/video0&quot;</span><span class=p>)</span>  <span class=c1># using V4L2</span>
+<span class=n>display</span> <span class=o>=</span> <span class=n>jetson</span><span class=o>.</span><span class=n>utils</span><span class=o>.</span><span class=n>glDisplay</span><span class=p>()</span>
 
-<span class=n>pygame</span><span class=o>.</span><span class=n>joystick</span><span class=o>.</span><span class=n>init</span><span class=p>()</span>
-<span class=n>DEVICE</span> <span class=o>=</span> <span class=s2>&quot;Logitech Gamepad F710&quot;</span> 
-
-<span class=n>f710</span> <span class=o>=</span> <span class=bp>None</span>
-<span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=n>pygame</span><span class=o>.</span><span class=n>joystick</span><span class=o>.</span><span class=n>get_count</span><span class=p>()):</span>
-    <span class=k>if</span> <span class=n>pygame</span><span class=o>.</span><span class=n>joystick</span><span class=o>.</span><span class=n>Joystick</span><span class=p>(</span><span class=n>i</span><span class=p>)</span><span class=o>.</span><span class=n>get_name</span><span class=p>()</span> <span class=o>==</span> <span class=n>DEVICE</span><span class=p>:</span>
-        <span class=n>f710</span> <span class=o>=</span> <span class=n>pygame</span><span class=o>.</span><span class=n>joystick</span><span class=o>.</span><span class=n>Joystick</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
-<span class=k>if</span> <span class=ow>not</span> <span class=n>f710</span><span class=p>:</span>
-    <span class=k>print</span><span class=p>(</span><span class=s2>&quot;Not found </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>DEVICE</span><span class=p>)</span> 
-    <span class=nb>exit</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span>
-
-<span class=n>f710</span><span class=o>.</span><span class=n>init</span><span class=p>()</span>
-<span class=n>num_buttons</span> <span class=o>=</span> <span class=n>f710</span><span class=o>.</span><span class=n>get_numbuttons</span><span class=p>()</span>
-<span class=n>num_axes</span> <span class=o>=</span> <span class=n>f710</span><span class=o>.</span><span class=n>get_numaxes</span><span class=p>()</span>
-<span class=n>num_hats</span> <span class=o>=</span> <span class=n>f710</span><span class=o>.</span><span class=n>get_numhats</span><span class=p>()</span>
-<span class=k>print</span><span class=p>(</span><span class=s2>&quot;device name: </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>f710</span><span class=o>.</span><span class=n>get_name</span><span class=p>())</span>
-<span class=k>print</span><span class=p>(</span><span class=s2>&quot;num of button: </span><span class=si>%d</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>num_buttons</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=s2>&quot;num of axis: </span><span class=si>%d</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>num_axes</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=s2>&quot;num of hat: </span><span class=si>%d</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=n>num_hats</span><span class=p>)</span>
-
-<span class=n>pygame</span><span class=o>.</span><span class=n>init</span><span class=p>()</span>
-<span class=n>axes</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>*</span><span class=n>num_axes</span>
-<span class=n>buttons</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>*</span><span class=n>num_buttons</span>
-<span class=n>hats_x</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>*</span><span class=n>num_hats</span>
-<span class=n>hats_y</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>*</span><span class=n>num_hats</span>
-
-<span class=k>while</span> <span class=bp>True</span><span class=p>:</span>
-    <span class=k>for</span> <span class=n>e</span> <span class=ow>in</span> <span class=n>pygame</span><span class=o>.</span><span class=n>event</span><span class=o>.</span><span class=n>get</span><span class=p>():</span> 
-        <span class=k>if</span> <span class=n>e</span><span class=o>.</span><span class=n>type</span> <span class=o>==</span> <span class=n>pygame</span><span class=o>.</span><span class=n>locals</span><span class=o>.</span><span class=n>JOYAXISMOTION</span><span class=p>:</span> <span class=c1># 7</span>
-            <span class=n>axes</span><span class=p>[</span><span class=n>e</span><span class=o>.</span><span class=n>axis</span><span class=p>]</span> <span class=o>=</span> <span class=n>f710</span><span class=o>.</span><span class=n>get_axis</span><span class=p>(</span><span class=n>e</span><span class=o>.</span><span class=n>axis</span><span class=p>)</span>
-        <span class=k>elif</span> <span class=n>e</span><span class=o>.</span><span class=n>type</span> <span class=o>==</span> <span class=n>pygame</span><span class=o>.</span><span class=n>locals</span><span class=o>.</span><span class=n>JOYHATMOTION</span><span class=p>:</span> <span class=c1># 9</span>
-            <span class=n>hats_x</span><span class=p>[</span><span class=n>e</span><span class=o>.</span><span class=n>hat</span><span class=p>],</span> <span class=n>hats_y</span><span class=p>[</span><span class=n>e</span><span class=o>.</span><span class=n>hat</span><span class=p>]</span> <span class=o>=</span> <span class=n>f710</span><span class=o>.</span><span class=n>get_hats</span><span class=p>(</span><span class=n>e</span><span class=o>.</span><span class=n>hat</span><span class=p>)</span>
-        <span class=k>elif</span> <span class=n>e</span><span class=o>.</span><span class=n>type</span> <span class=o>==</span> <span class=n>pygame</span><span class=o>.</span><span class=n>locals</span><span class=o>.</span><span class=n>JOYBUTTONDOWN</span><span class=p>:</span> <span class=c1># 10</span>
-            <span class=n>buttons</span><span class=p>[</span><span class=n>e</span><span class=o>.</span><span class=n>button</span><span class=p>]</span> <span class=o>=</span> <span class=mi>1</span>
-        <span class=k>elif</span> <span class=n>e</span><span class=o>.</span><span class=n>type</span> <span class=o>==</span> <span class=n>pygame</span><span class=o>.</span><span class=n>locals</span><span class=o>.</span><span class=n>JOYBUTTONUP</span><span class=p>:</span> <span class=c1># 11</span>
-            <span class=n>buttons</span><span class=p>[</span><span class=n>e</span><span class=o>.</span><span class=n>button</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span>
-
-        <span class=k>for</span> <span class=n>index</span><span class=p>,</span> <span class=n>item</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>axes</span><span class=p>):</span>
-            <span class=k>print</span><span class=p>(</span><span class=s2>&quot;axis(</span><span class=si>%s</span><span class=s2>): </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>index</span><span class=p>),</span> <span class=nb>str</span><span class=p>(</span><span class=n>item</span><span class=p>)))</span>
-        <span class=k>for</span> <span class=n>index</span><span class=p>,</span> <span class=n>item</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>buttons</span><span class=p>):</span>
-            <span class=k>print</span><span class=p>(</span><span class=s2>&quot;button(</span><span class=si>%s</span><span class=s2>): </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>index</span><span class=p>),</span> <span class=nb>str</span><span class=p>(</span><span class=n>item</span><span class=p>)))</span>
-        <span class=k>for</span> <span class=n>index</span><span class=p>,</span> <span class=n>item</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>hats_x</span><span class=p>):</span>
-            <span class=k>print</span><span class=p>(</span><span class=s2>&quot;hat(</span><span class=si>%s</span><span class=s2>): </span><span class=si>%s</span><span class=s2>, </span><span class=si>%s</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>index</span><span class=p>),</span> <span class=nb>str</span><span class=p>(</span><span class=n>hats_x</span><span class=p>[</span><span class=n>index</span><span class=p>]),</span> <span class=nb>str</span><span class=p>(</span><span class=n>hats_y</span><span class=p>[</span><span class=n>index</span><span class=p>])))</span>
+<span class=k>while</span> <span class=n>display</span><span class=o>.</span><span class=n>IsOpen</span><span class=p>():</span>
+    <span class=n>img</span><span class=p>,</span> <span class=n>width</span><span class=p>,</span> <span class=n>height</span> <span class=o>=</span> <span class=n>camera</span><span class=o>.</span><span class=n>CaptureRGBA</span><span class=p>()</span>
+    <span class=n>detections</span> <span class=o>=</span> <span class=n>net</span><span class=o>.</span><span class=n>Detect</span><span class=p>(</span><span class=n>img</span><span class=p>,</span> <span class=n>width</span><span class=p>,</span> <span class=n>height</span><span class=p>)</span>
+    <span class=n>display</span><span class=o>.</span><span class=n>RenderOnce</span><span class=p>(</span><span class=n>img</span><span class=p>,</span> <span class=n>width</span><span class=p>,</span> <span class=n>height</span><span class=p>)</span>
+    <span class=n>display</span><span class=o>.</span><span class=n>SetTitle</span><span class=p>(</span><span class=s2>&quot;Object Detection | Network {:.0f} FPS&quot;</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=n>net</span><span class=o>.</span><span class=n>GetNetworkFPS</span><span class=p>()))</span>
 </code></pre></div></td></tr></table></p>
+<h2 id="c922">C922</h2>
+<p><img alt="" src="../img/c922_fps.png" /></p>
+<h2 id="c720">C720</h2>
+<p><img alt="" src="../img/c720_fps.png" /></p>
+<h2 id="imx291">IMX291搭載カメラ</h2>
+<p><img alt="" src="../img/imx291_fps.png" /></p>
+<h2 id="imx317">IMX317搭載カメラ</h2>
+<p><img alt="" src="../img/imx317_fps.png" /></p>
                 
               
               
@@ -645,7 +611,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../02.360Camera/" title="360度Camera" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../01.CSICamera/" title="CSI Camera" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -654,19 +620,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                360度Camera
+                CSI Camera
               </div>
             </div>
           </a>
         
         
-          <a href="../09.ng/" title="Failed" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../03.360Camera/" title="360度Camera" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Failed
+                360度Camera
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
