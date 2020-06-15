@@ -557,6 +557,42 @@
 <span class=n>cap</span><span class=o>.</span><span class=n>release</span><span class=p>()</span>
 <span class=n>cv2</span><span class=o>.</span><span class=n>destroyAllWindows</span><span class=p>()</span>
 </code></pre></div></td></tr></table></p>
+<table>
+<thead>
+<tr>
+<th align="left">gstreamer Pipelineコマンド(h264)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">v4l2src</td>
+</tr>
+<tr>
+<td align="left">device=/dev/video0</td>
+</tr>
+<tr>
+<td align="left">video/x-h264, width=(int)2580, height=(int)1280, framerate=(fraction)30/1</td>
+</tr>
+<tr>
+<td align="left">queue</td>
+</tr>
+<tr>
+<td align="left">nvv4l2decoder enable-max-performance=1 drop-frame-interval=1</td>
+</tr>
+<tr>
+<td align="left">nvvidconv</td>
+</tr>
+<tr>
+<td align="left">video/x-raw, width=(int)800, height=(int)400, format=(string)BGRx</td>
+</tr>
+<tr>
+<td align="left">videoconvert</td>
+</tr>
+<tr>
+<td align="left">appsink</td>
+</tr>
+</tbody>
+</table>
 <h2 id="ocam-vru01bk">OCAM-VRU01BK</h2>
 <p><img alt="" src="../img/VRU01BK_fps.png" /></p>
                 
