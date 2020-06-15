@@ -556,7 +556,7 @@
 <span class=n>cv2</span><span class=o>.</span><span class=n>destroyAllWindows</span><span class=p>()</span>
 </code></pre></div></td></tr></table></p>
 <p>gstreamer</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>nvarguscamerasrc sensor-id=0 ! video/x-raw(memory:NVMM), width=1280, height=720, format=(string)NV12, framerate=(fraction)30/1 ! nvvidconv ! video/x-raw, width=(int)320, height=(int)240, format=(string)BGRx ! videoconvert ! appsink</span>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>nvarguscamerasrc sensor-id=0 ! video/x-raw(memory:NVMM), width=1280, height=720, format=(string)NV12, framerate=(fraction)120/1 ! nvvidconv ! video/x-raw, width=(int)320, height=(int)240, format=(string)BGRx ! videoconvert ! appsink</span>
 </code></pre></div></td></tr></table></p>
 <h2 id="imx219">IMX219搭載カメラ</h2>
 <p><img alt="" src="../img/imx291_nvg_fps.png" /></p>
