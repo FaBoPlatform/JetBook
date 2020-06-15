@@ -588,7 +588,8 @@
 25
 26
 27
-28</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>import</span> <span class=nn>time</span>
+28
+29</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>import</span> <span class=nn>time</span>
 <span class=kn>import</span> <span class=nn>cv2</span>
 
 <span class=k>def</span> <span class=nf>_gst_str_yuyv</span><span class=p>(</span><span class=nb>id</span><span class=p>,</span> <span class=n>cap_width</span><span class=p>,</span> <span class=n>cap_height</span><span class=p>,</span> <span class=n>fps</span><span class=p>):</span>
@@ -597,14 +598,15 @@
 <span class=k>def</span> <span class=nf>_gst_str_mjpeg</span><span class=p>(</span><span class=nb>id</span><span class=p>,</span> <span class=n>cap_width</span><span class=p>,</span> <span class=n>cap_height</span><span class=p>,</span> <span class=n>fps</span><span class=p>):</span>
     <span class=k>return</span> <span class=s1>&#39;v4l2src device=/dev/video{} ! image/jpeg, width=(int){}, height=(int){}, framerate=(fraction){}/1 ! jpegdec ! videoconvert !  video/x-raw, format=(string)BGR ! appsink&#39;</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=nb>id</span><span class=p>,</span> <span class=n>cap_width</span><span class=p>,</span> <span class=n>cap_height</span><span class=p>,</span> <span class=n>fps</span><span class=p>)</span>
 
-
-<span class=n>cap</span> <span class=o>=</span> <span class=n>cv2</span><span class=o>.</span><span class=n>VideoCapture</span><span class=p>(</span><span class=n>_gst_str_yuyv</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1280</span><span class=p>,</span> <span class=mi>720</span><span class=p>,</span> <span class=mi>30</span><span class=p>),</span> <span class=n>cv2</span><span class=o>.</span><span class=n>CAP_GSTREAMER</span><span class=p>)</span>
+<span class=n>cap</span> <span class=o>=</span> <span class=n>cv2</span><span class=o>.</span><span class=n>VideoCapture</span><span class=p>(</span><span class=n>_gst_str_yuyv</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1280</span><span class=p>,</span> <span class=mi>720</span><span class=p>,</span> <span class=mi>60</span><span class=p>),</span> <span class=n>cv2</span><span class=o>.</span><span class=n>CAP_GSTREAMER</span><span class=p>)</span>
+<span class=c1>#cap = cv2.VideoCapture(_gst_str_mjpeg(0, 1280, 720, 60), cv2.CAP_GSTREAMER)</span>
 
 <span class=n>count</span> <span class=o>=</span> <span class=mi>0</span>
 <span class=n>start_time</span> <span class=o>=</span> <span class=n>time</span><span class=o>.</span><span class=n>time</span><span class=p>()</span>
 <span class=k>while</span><span class=p>(</span><span class=bp>True</span><span class=p>):</span>
     <span class=n>ret</span><span class=p>,</span> <span class=n>frame</span> <span class=o>=</span> <span class=n>cap</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
-    <span class=n>count</span> <span class=o>+=</span> <span class=mi>1</span>
+    <span class=k>if</span> <span class=n>ret</span> <span class=o>==</span> <span class=mi>1</span><span class=p>:</span>
+        <span class=n>count</span> <span class=o>+=</span> <span class=mi>1</span>
     <span class=n>now</span> <span class=o>=</span> <span class=n>time</span><span class=o>.</span><span class=n>time</span><span class=p>()</span>
     <span class=n>cv2</span><span class=o>.</span><span class=n>imshow</span><span class=p>(</span><span class=s1>&#39;usb camera&#39;</span><span class=p>,</span><span class=n>frame</span><span class=p>)</span>
     <span class=k>if</span> <span class=n>now</span> <span class=o>-</span> <span class=n>start_time</span> <span class=o>&gt;</span> <span class=mf>1.0</span><span class=p>:</span>
