@@ -561,35 +561,45 @@
 <thead>
 <tr>
 <th align="left">gstreamer Pipelineコマンド(h264)</th>
+<th align="left">解説</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">v4l2src</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">device=/dev/video0</td>
+<td align="left">USBで認識したカメラのデバイス名を指定</td>
 </tr>
 <tr>
 <td align="left">video/x-h264, width=(int)2580, height=(int)1280, framerate=(fraction)30/1</td>
+<td align="left">v4l2-ctlで調べた解像度とfpsを指定(2580x1280, 30fps)</td>
 </tr>
 <tr>
 <td align="left">queue</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">nvv4l2decoder enable-max-performance=1 drop-frame-interval=1</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">nvvidconv</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">video/x-raw, width=(int)800, height=(int)400, format=(string)BGRx</td>
+<td align="left">800x400, BGRxに変換</td>
 </tr>
 <tr>
 <td align="left">videoconvert</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">appsink</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>

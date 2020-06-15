@@ -623,26 +623,33 @@
 <thead>
 <tr>
 <th align="left">gstreamer Pipelineコマンド(YUYV)</th>
+<th align="left">解説</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">v4l2src</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">device=/dev/video0</td>
+<td align="left">USBで認識したカメラのデバイス名を指定</td>
 </tr>
 <tr>
 <td align="left">video/x-raw, width=(int)1280, height=(int)720, framerate=(fraction)60/1</td>
+<td align="left">v4l2-ctlで調べた解像度とfpsを指定(1280x720, 60fps)</td>
 </tr>
 <tr>
 <td align="left">videoconvert</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">video/x-raw, format=(string)BGR</td>
+<td align="left">BGRに変換</td>
 </tr>
 <tr>
 <td align="left">appsink</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -650,29 +657,37 @@
 <thead>
 <tr>
 <th align="left">gstreamer Pipelineコマンド(MJPEG)</th>
+<th align="left">解説</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">v4l2src</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">device=/dev/video0</td>
+<td align="left">USBで認識したカメラのデバイス名を指定</td>
 </tr>
 <tr>
 <td align="left">video/x-raw, width=(int)1280, height=(int)720, framerate=(fraction)60/1</td>
+<td align="left">v4l2-ctlで調べた解像度とfpsを指定(1280x720, 60fps)</td>
 </tr>
 <tr>
 <td align="left">jpegdec</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">videoconvert</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">video/x-raw, format=(string)BGR</td>
+<td align="left">BGRに変換</td>
 </tr>
 <tr>
 <td align="left">appsink</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
