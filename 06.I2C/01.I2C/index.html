@@ -479,6 +479,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../01.201/" title="I2C" class="md-nav__link">
+      I2C
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -518,6 +530,20 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     認識の確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    パッケージのインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    サンプル
   </a>
   
 </li>
@@ -566,6 +592,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    パッケージのインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    サンプル
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -586,6 +626,43 @@
 <h2 id="_1">認識の確認</h2>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo i2cdetect -r -y 8</span>
 </code></pre></div></td></tr></table></p>
+<h2 id="_2">パッケージのインストール</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>sudo pip install smbus</span>
+<span class=err>sudo pip install FaBo3Axis_ADXL345</span>
+</code></pre></div></td></tr></table></p>
+<h2 id="_3">サンプル</h2>
+<p>smbusが1ではなく、8になっている。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=c1># coding: utf-8</span>
+<span class=kn>import</span> <span class=nn>FaBo3Axis_ADXL345</span>
+<span class=kn>import</span> <span class=nn>time</span>
+<span class=kn>import</span> <span class=nn>sys</span>
+
+<span class=n>adxl345</span> <span class=o>=</span> <span class=n>FaBo3Axis_ADXL345</span><span class=o>.</span><span class=n>ADXL345</span><span class=p>()</span>
+
+<span class=k>try</span><span class=p>:</span>
+    <span class=k>while</span> <span class=bp>True</span><span class=p>:</span>
+        <span class=n>axes</span> <span class=o>=</span> <span class=n>adxl345</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
+        <span class=n>sys</span><span class=o>.</span><span class=n>stdout</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=s2>&quot;</span><span class=se>\r</span><span class=s2>x = </span><span class=si>%f</span><span class=s2>, y = </span><span class=si>%f</span><span class=s2>, z = </span><span class=si>%f</span><span class=s2>&quot;</span> <span class=o>%</span> <span class=p>(</span><span class=n>axes</span><span class=p>[</span><span class=s1>&#39;x&#39;</span><span class=p>],</span>  <span class=n>axes</span><span class=p>[</span><span class=s1>&#39;y&#39;</span><span class=p>],</span> <span class=n>axes</span><span class=p>[</span><span class=s1>&#39;z&#39;</span><span class=p>]))</span>
+        <span class=n>sys</span><span class=o>.</span><span class=n>stdout</span><span class=o>.</span><span class=n>flush</span><span class=p>()</span>
+        <span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mf>0.1</span><span class=p>)</span>
+<span class=k>except</span> <span class=ne>KeyboardInterrupt</span><span class=p>:</span>
+    <span class=n>sys</span><span class=o>.</span><span class=n>exit</span><span class=p>()</span>
+</code></pre></div></td></tr></table></p>
                 
               
               
@@ -604,7 +681,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../../05.Controller/01.F710/" title="HID Joystick" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../01.201/" title="I2C" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -613,7 +690,7 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                HID Joystick
+                I2C
               </div>
             </div>
           </a>
