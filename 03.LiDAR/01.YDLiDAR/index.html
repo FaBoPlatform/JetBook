@@ -543,33 +543,33 @@
 <p>Jetpack 4.3対応のROSのインストール</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code>$ git clone https://github.com/jetsonhacks/installROSXavier
-$ <span class=nb>cd</span> insyallROSXavier
-$ ./installROS.sh -p ros-melodic-desktop
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>git clone https://github.com/jetsonhacks/installROSXavier</span>
+<span class=err>cd insyallROSXavier</span>
+<span class=err>./installROS.sh -p ros-melodic-desktop</span>
 </code></pre></div></td></tr></table></p>
 <p>ワークスペースの作成</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code>$ mkdir -p ~/catkin_ws/src
-$ <span class=nb>cd</span> ~/catkin_ws/
-$ catkin_make
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>mkdir -p ~/catkin_ws/src</span>
+<span class=err>cd ~/catkin_ws/</span>
+<span class=err>catkin_make</span>
 </code></pre></div></td></tr></table></p>
 <h2 id="ydlidar_1">YDLiDARのインストール</h2>
 <p>YDLiDARのMake</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code>$ <span class=nb>cd</span> ~/catkin_ws/src/
-$ git clone https://github.com/YDLIDAR/ydlidar_ros
-$ catkin_make
-$ <span class=nb>source</span> ~/catkin_ws/devel/setup.bash
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd ~/catkin_ws/src/</span>
+<span class=err>git clone https://github.com/YDLIDAR/ydlidar_ros</span>
+<span class=err>catkin_make</span>
+<span class=err>echo &#39;source ~/catkin_ws/devel/setup.bash&#39; &gt;&gt; ~/.bashrc</span>
 </code></pre></div></td></tr></table></p>
 <p>YDLiDARを/dev/ydlidarで認識</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code>$ <span class=nb>cd</span> ~/catkin_ws/src/ydlidar_ros/startup
-$ sudo chmod <span class=m>777</span> ./*
-$ sudo sh initenv.sh
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>cd ~/catkin_ws/src/ydlidar_ros/startup</span>
+<span class=err>sudo chmod 777 ./*</span>
+<span class=err>sudo sh initenv.sh</span>
 </code></pre></div></td></tr></table></p>
 <h2 id="lidarx4">LiDARの起動(X4)</h2>
 <p>~/catkin_ws/src/ydlidar_ros/launch/lidar_view.launchの修正、<code>lidar.launch</code>を<code>X4.launch</code>に修正。</p>
@@ -582,7 +582,7 @@ $ sudo sh initenv.sh
 <span class=nt>&lt;/launch&gt;</span>
 </code></pre></div></td></tr></table></p>
 <p>実行</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code>$ roslaunch ydlidar_ros lidar_view.launch
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>roslaunch ydlidar_ros lidar_view.launch</span>
 </code></pre></div></td></tr></table></p>
                 
               
