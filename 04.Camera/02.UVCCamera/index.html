@@ -454,6 +454,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ov4689" class="md-nav__link">
+    OV4689
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -634,6 +641,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ov4689" class="md-nav__link">
+    OV4689
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -678,6 +692,11 @@
 </tr>
 <tr>
 <td align="left">IMX317搭載カメラ</td>
+<td align="left">各社</td>
+<td align="left">○</td>
+</tr>
+<tr>
+<td align="left">OV4689搭載カメラ</td>
 <td align="left">各社</td>
 <td align="left">○</td>
 </tr>
@@ -852,6 +871,37 @@
 </table>
 <h2 id="imx317">IMX317搭載カメラ</h2>
 <p><img alt="" src="../img/imx317_fps.png" /></p>
+<h2 id="ov4689">OV4689</h2>
+<p><img alt="" src="../img/ov4689_fps.png" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">サイズ</th>
+<th align="left">fps(平均)</th>
+<th align="left">フォーマット</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1920x1080</td>
+<td align="left">22fps</td>
+<td align="left">MJPEG</td>
+</tr>
+<tr>
+<td align="left">1280x720</td>
+<td align="left">45fps</td>
+<td align="left">MJPEG</td>
+</tr>
+<tr>
+<td align="left">640x360</td>
+<td align="left">150fps</td>
+<td align="left">MJPEG</td>
+</tr>
+</tbody>
+</table>
+<p>GStreamer pipeline</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=err>v4l2src device=/dev/video0 io-mode=2 ! image/jpeg, width=640, height=360, format=MJPG ! jpegdec ! videoconvert ! video/x-raw, width=640, height=360 ! appsink</span>
+</code></pre></div></td></tr></table></p>
                 
               
               
