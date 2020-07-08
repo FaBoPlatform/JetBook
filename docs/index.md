@@ -18,6 +18,7 @@ GithubのRepoに[Issues](https://github.com/FaBoPlatform/JetBook/issues)をあ�
 - [DonkeyCar Docs](https://faboplatform.github.io/DonkeyDocs/)
 - [EdgeAI Docs](https://faboplatform.github.io/EdgeAIDocs/)
 - [JetBook Docs](https://faboplatform.github.io/JetBook/)
+- [NSynth Docs](https://faboplatform.github.io/NSynthDocs/)
 
 ## FaBo教材
 - [Arduino Docs](https://faboplatform.github.io/ArduinoDocs/)
