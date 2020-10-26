@@ -762,7 +762,7 @@
                 
                 <h1 id="gdkpixbufoverlay">gdkpixbufoverlayで画像を追加</h1>
 <p>gst-launch-1.0での起動</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=sx>!gst-launch-1.0 v4l2src device=/dev/video1 ! image/jpeg,width=1280,height=720,framerate=30/1 ! jpegdec ! videoconvert ! gdkpixbufoverlay location=a.png offset-x=400 offset-y=400 overlay-width=440 overlay-height=320 ! autovideosink</span>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=sx>!gst-launch-1.0 v4l2src device=/dev/video1 ! image/jpeg,width=1280,height=720,framerate=30/1 ! jpegdec ! videoconvert ! videoscale ! video/x-raw,width=300,height=200 ! gdkpixbufoverlay location=a.png offset-x=400 offset-y=400 overlay-width=440 overlay-height=320 ! autovideosink</span>
 </code></pre></div></td></tr></table></p>
 <p>サンプル</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
@@ -803,7 +803,9 @@
 36
 37
 38
-39</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>import</span> <span class=nn>time</span>
+39
+40
+41</pre></div></td><td class=code><div class=codehilite><pre><span></span><code><span class=kn>import</span> <span class=nn>time</span>
 <span class=kn>import</span> <span class=nn>cv2</span>
 
 <span class=k>def</span> <span class=nf>_gst_str_filter</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
@@ -811,6 +813,8 @@
 <span class=s1>    ! image/jpeg,width=1280,height=720,framerate=30/1 </span><span class=se>\</span>
 <span class=s1>    ! jpegdec </span><span class=se>\</span>
 <span class=s1>    ! videoconvert </span><span class=se>\</span>
+<span class=s1>    ! videoscale </span><span class=se>\</span>
+<span class=s1>    ! video/x-raw,width=300,height=200 </span><span class=se>\</span>
 <span class=s1>    ! gdkpixbufoverlay location=filter.png offset-x=400 offset-y=380 overlay-width=440 overlay-height=340 </span><span class=se>\</span>
 <span class=s1>    ! appsink&#39;</span>
 
